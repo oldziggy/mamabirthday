@@ -6,13 +6,31 @@
 		<title></title>
 	</head>
 	<body>
-		<div>
-			{{cur_wish.wish_text}}
-		</div>
+                {% if cur_wish.wish_text %}
+			<div>
+				{{cur_wish.wish_text}}
+			</div>
+                {% endif%}
+
 		{% if cur_wish.image %}
 			<img src="{{cur_wish.image.url}}" alt="Image">
 		{% endif%}
 
+
+		{%if cur_wish.audio%}
+			<audio controls>
+				<source src='{{cur_wish.audio.url}}' type='audio/mp3'>
+				ur browser doesnt support this
+			</audio>
+		{% endif%}
+
+
+		{%if cur_wish.video%}
+			<video controls>
+				<source src='{{cur_wish.video.url}}' type='video/mp4'>
+				ur browser doesnt support this
+			</video>
+		{% endif%}
 
 		{% if next_id %}
                  	<a href="{% url 'wishes:detail' next_id %}">Назад</a>
