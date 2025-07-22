@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			{{cur_wish_text}}
+		</div>
+		{% if prev_id%}
+                 	<a href="{% url 'wishes:detail' prev_id %}">Далее</a>
+		{%endif%}
+
+		{% if next_id %}
+                 	<a href="{% url 'wishes:detail' next_id %}">Назад</a>
+		{%endif%}
+	</body>
+</html>

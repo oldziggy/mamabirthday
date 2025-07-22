@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>С днем рождения!</title>
+</head>
+<body>
+		<h1>С Днем Рождения!</h1>
+    <h2>Поздравлений получено на данный момент: {{ wish_count }}</h2>
+
+    <a href="{% url 'wishes:detail_no_id' %}">Перейти к поздравлениям</a>
+
+</body>
+</html>
