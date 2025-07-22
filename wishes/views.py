@@ -21,7 +21,7 @@ def detail(request, wish_id = None):
     prev_id = prev_wish.id if prev_wish else None
     next_id = next_wish.id if next_wish else None
 
-    context = {'cur_wish_text': cur_wish.wish_text, 'prev_id': prev_id, 'next_id': next_id}
+    context = {'cur_wish': cur_wish, 'prev_id': prev_id, 'next_id': next_id}
     return render(request, 'wishes/detail.html', context)
 
 

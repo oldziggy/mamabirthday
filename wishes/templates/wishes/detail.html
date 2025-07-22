@@ -7,14 +7,19 @@
 	</head>
 	<body>
 		<div>
-			{{cur_wish_text}}
+			{{cur_wish.wish_text}}
 		</div>
-		{% if prev_id%}
-                 	<a href="{% url 'wishes:detail' prev_id %}">Далее</a>
-		{%endif%}
+		{% if cur_wish.image %}
+			<img src="{{cur_wish.image.url}}" alt="Image">
+		{% endif%}
+
 
 		{% if next_id %}
                  	<a href="{% url 'wishes:detail' next_id %}">Назад</a>
+		{%endif%}
+
+		{% if prev_id%}
+                 	<a href="{% url 'wishes:detail' prev_id %}">Далее</a>
 		{%endif%}
 	</body>
 </html>
