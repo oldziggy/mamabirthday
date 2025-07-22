@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>С днем рождения!</title>
+    {% load static %}
+
+     <link rel="stylesheet" href="{% static 'wishes/index.css' %}">
 </head>
 <body>
 		<h1>С Днем Рождения!</h1>
     <h2>Поздравлений к просмотру: {{ wish_count }}</h2>
 
-    <a href="{% url 'wishes:detail_no_id' %}">Перейти к поздравлениям</a>
-
+    <a href="{% url 'wishes:detail_no_id' %}">перейти к поздравлениям</a>
 </body>
 </html>

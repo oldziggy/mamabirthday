@@ -3,7 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title>
+		<title>{{cur_wish.sender}}</title>
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'wishes/detail.css' %}">
+
 	</head>
 	<body>
                 {% if cur_wish.wish_text %}
