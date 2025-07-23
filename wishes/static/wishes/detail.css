@@ -30,28 +30,23 @@ body{
 	background: radial-gradient(circle, rgba(137, 220, 235, 1) 0%, rgba(166, 227, 161, 1) 100%);
 }
 
-#wish_text, img, audio, video {
+img, audio, video {
 	border-style: solid;
 	border-radius: 11px;
 	max-width: 800px;
+        border-color:#8839ef;
+
 }
 img{
-	border-color: #df8e1d;
 	max-height: 500px;
 }
 
-video{
-	border-color: #1e66f5;
-}
-audio{
-	border-color: #8839ef;
-}
+
 
 #wish_text{
 	font-size: 40px;
 	font-weight: 500;
-
-	border-color:#ea76cb;
+	max-width: 800px;
 }
 #voice{
 margin: 0;
