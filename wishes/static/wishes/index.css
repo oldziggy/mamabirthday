@@ -41,4 +41,11 @@ a{
 	color:#cba6f7;
 	font-size: 60px;
 }
+a:hover{
+
+
+	background-color: #313244;
+	color:#8839ef;
+	border-color:#8839ef;
+}
 

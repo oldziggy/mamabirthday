@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 200;
+
+	color: #313244;
+
+}
+
+h1{
+	font-weight: 300;
+	font-style: italic;
+	font-size: 50px;
+
+
+}
+
+
+body{
+	height: 96vh;
+	display:flex;
+	gap: 15px;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+
+
+	background: #89DCEB;
+	background: radial-gradient(circle, rgba(137, 220, 235, 1) 0%, rgba(166, 227, 161, 1) 100%);
+}
+
+#wish_text, img, audio, video {
+	border-style: solid;
+	border-radius: 11px;
+	max-width: 800px;
+}
+img{
+	border-color: #df8e1d;
+	max-height: 500px;
+}
+
+video{
+	border-color: #1e66f5;
+}
+audio{
+	border-color: #8839ef;
+}
+
+#wish_text{
+	font-size: 40px;
+	font-weight: 500;
+
+	border-color:#ea76cb;
+}
+#voice{
+margin: 0;
+  padding: 0;
+	font-size: 30px;
+	font-weight: 300;
+	font-style: italic;
+}
+
+
+.navbut{
+	text-decoration: none;
+	font-size: 30px;
+	border-style:solid;
+	border-radius:6px;
+	border-color:#cba6f7;
+	border-width:2px;
+
+	background-color: #313244;
+	color:#cba6f7;
+}
+.navbut:hover{
+	
+	background-color: #313244;
+	color:#8839ef;
+	border-color:#8839ef;
+
+}

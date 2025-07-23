@@ -9,22 +9,28 @@
 
 	</head>
 	<body>
-                {% if cur_wish.wish_text %}
-			<div>
-				{{cur_wish.wish_text}}
-			</div>
-                {% endif%}
+		<header>
+		<h1>Отправитель: {{cur_wish.sender}}</h1>
+		</header>
 
 		{% if cur_wish.image %}
 			<img src="{{cur_wish.image.url}}" alt="Image">
 		{% endif%}
 
+                {% if cur_wish.wish_text %}
+			<div id='wish_text'>
+				{{cur_wish.wish_text}}
+			</div>
+                {% endif%}
+
+
 
 		{%if cur_wish.audio%}
-			<audio controls>
-				<source src='{{cur_wish.audio.url}}' type='audio/mp3'>
-				ur browser doesnt support this
-			</audio>
+		 		<div id='voice'>голосовое сообщение:</div>
+				<audio controls>
+					<source src='{{cur_wish.audio.url}}' type='audio/mp3'>
+					ur browser doesnt support this
+				</audio>
 		{% endif%}
 
 
@@ -33,14 +39,17 @@
 				<source src='{{cur_wish.video.url}}' type='video/mp4'>
 				ur browser doesnt support this
 			</video>
-		{% endif%}
+			{% endif%}
 
-		{% if next_id %}
-                 	<a href="{% url 'wishes:detail' next_id %}">Назад</a>
-		{%endif%}
+                <div id='navigation'>
+			{% if next_id %}
+				<a class='navbut' id='back' href="{% url 'wishes:detail' next_id %}">Назад</a>
+			{%endif%}
 
-		{% if prev_id%}
-                 	<a href="{% url 'wishes:detail' prev_id %}">Далее</a>
-		{%endif%}
+			{% if prev_id%}
+				<a class = 'navbut' id='next' href="{% url 'wishes:detail' prev_id %}">Далее</a>
+			{%endif%}
+		</div>
+
 	</body>
 </html>
