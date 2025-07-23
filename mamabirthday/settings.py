@@ -11,12 +11,17 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 import os
+from environ import Env
+env = Env()
 
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+env.read_env(str(BASE_DIR / '.env'))
+
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 # Quick-start development settings - unsuitable for production
@@ -30,7 +35,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 # Application definition
 
 INSTALLED_APPS = [
@@ -77,10 +83,7 @@ WSGI_APPLICATION = 'mamabirthday.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(env('DATABASE_URL'))
 }
 
 
