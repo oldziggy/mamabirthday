@@ -33,8 +33,8 @@ SECRET_KEY = 'django-insecure-@gl+be&)z%+rwqb@#wx#vxe$o^=npk-9we==rvbxyi9=583ic%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'happybirthdaynat.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://happybirthdaynat.up.railway.app']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'natbirthdayprod.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://natbirthdayprod.up.railway.app']
 
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
